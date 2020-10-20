@@ -1,8 +1,8 @@
 import time
 import smbus
-from Sensors.Sensor import Sensor
+#from Sensors.Sensor import Sensor
 
-class SHT85(Sensor):
+class sht85():
     def __init__(self,bus=3,address=0x44):
         self.bus=smbus.SMBus(int(bus))
         self.address=address
@@ -21,7 +21,7 @@ class SHT85(Sensor):
         h_val = (data0[3] <<8) + data0[4]     # Convert the data
         T = ((175.72 * t_val) / 65536.0 ) - 45 #do the maths from datasheet
         H = ((100 * h_val) / 65536.0 )
-        return {"temperature":T,"humidity":H}
+        return [T,H]
 
     def get_temperature(self):
         return self.get_data["temperature"]
