@@ -1,7 +1,4 @@
-run "chmod 755 infana.sh"
-
-run "./infana.sh"
-
+run "bash infana.sh"
 Commands for creating a database and granting all the premissions
 
 """
