@@ -1,0 +1,17 @@
+run "chmod 755 infana.sh"
+
+run "./infana.sh"
+
+Commands for creating a database and granting all the premissions
+
+"""
+
+create database home
+use home
+
+create user grafana with password '<passwordhere>' with all privileges
+grant all privileges on home to grafana
+
+show users
+
+"""
