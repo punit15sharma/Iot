@@ -1,3 +1,7 @@
+##This is the repository for installing Grafana+Influx+VScode in Rpi with Codes to upload (SHT85) data to influx
+
+
+
 run "bash infana.sh"
 Commands for creating a database and granting all the premissions
 
