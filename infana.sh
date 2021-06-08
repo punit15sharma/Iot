@@ -17,7 +17,7 @@ read -sp 'Password for influx user grafana: ' passvar
 
 influx -execute 'create database Coldjig'
 influx -execute 'use Coldjig'
-influx -execute 'create user grafana with password '$passvar' with all privileges
+influx -execute 'create user grafana with password '$passvar' with all privileges'
 influx -execute 'grant all privileges on SHT31 to grafana'
 
 
